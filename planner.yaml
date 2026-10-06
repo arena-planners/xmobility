@@ -1,0 +1,33 @@
+action_type: differential_drive
+rate_hz: 5
+sensor_needs: [image]
+controls_orientation: false
+goal_inputs: [pose]
+signals: []
+
+depends:
+  global_plan: true
+
+config:
+  device: cuda
+  route_spacing_m: 1.0
+  mapless: false
+
+observations:
+  aliases: {}
+
+  datasources:
+    robot_pose:
+      type: RobotPoseTFGenerator
+      params: {}
+
+    camera:
+      type: sensor_msgs/Image
+      params:
+        sensor: image
+        output_size: [512, 320]
+
+    global_plan:
+      type: nav_msgs/Path
+      params:
+        topic: plan

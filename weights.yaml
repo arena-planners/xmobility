@@ -1,0 +1,11 @@
+files:
+  - repo: nvidia/X-Mobility
+    filename: x_mobility-nav2-semantic_action_path.ckpt
+    revision: cb17774c22b96802cf42bf314ee5fc87378421fd
+    dest: model/x_mobility-nav2-semantic_action_path.ckpt
+    sha256: 339c68f9e027f9758bdd101f3a727f330c3e8f7be1fb6ba665c0e8a4681a2e57
+  - repo: facebook/dinov2-small
+    filename: config.json
+    revision: ed25f3a31f01632728cabb09d1542f84ab7b0056
+    dest: model/dinov2-small/config.json
+    sha256: 1809f83e3bdb1609a501a610ad4a742f4fd8ae44d72ca4aa0df52d1f2ac8628d
